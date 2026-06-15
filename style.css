@@ -256,3 +256,62 @@ a:focus-visible {
   outline-offset: 3px;
   border-radius: 2px;
 }
+
+/* =========================================================
+   CV page
+   ========================================================= */
+.cv-hero { padding-block: clamp(3rem, 7vw, 5rem) clamp(2rem, 5vw, 3rem); }
+.cv-lede { max-width: 48ch; font-size: clamp(1.05rem, 2vw, 1.25rem); }
+
+.cv-download {
+  color: var(--signal) !important;
+  border: 1px solid var(--signal) !important;
+  border-radius: 3px;
+  padding: .35rem .75rem !important;
+  font-weight: 500;
+  transition: background .15s, color .15s;
+}
+.cv-download:hover {
+  background: var(--signal);
+  color: var(--paper) !important;
+}
+
+.cv-rows { display: flex; flex-direction: column; }
+.cv-row {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: .4rem 2rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.cv-row:first-child { border-top: 1px solid var(--rule); }
+.cv-when {
+  font-size: .82rem;
+  color: var(--ink-faint);
+  padding-top: .15rem;
+}
+.cv-line1 { margin: 0 0 .3rem; font-weight: 600; }
+.cv-line2 { margin: 0; color: var(--ink-soft); font-size: .96rem; }
+.cv-note { color: var(--ink-faint); }
+
+.cv-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.8rem;
+}
+.skill-group h3 {
+  font-family: var(--mono);
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: .03em;
+  color: var(--signal);
+  margin: 0 0 .6rem;
+  padding-bottom: .4rem;
+  border-bottom: 1px solid var(--rule);
+}
+.skill-group p { margin: 0; color: var(--ink-soft); font-size: .96rem; }
+
+@media (max-width: 640px) {
+  .cv-row { grid-template-columns: 1fr; gap: .2rem; }
+  .cv-when { padding-top: 0; }
+}
