@@ -20,6 +20,7 @@
     <nav aria-label="Primary">
       <a href="index.html" aria-current="page">Home</a>
       <a href="#research">Research</a>
+      <a href="#statement">Statement</a>
       <a href="#tools">Tools</a>
       <a href="#publications">Publications</a>
       <a href="cv.html">CV</a>
@@ -76,12 +77,118 @@
       <article class="thread">
         <h3>Genotype-to-transcriptome</h3>
         <p>
-          <span class="mono">scGoT-EDIT</span>, a single-cell platform that connects
+          <span class="mono">GoT-EDIT</span>, a single-cell platform that connects
           CRISPR editing outcomes directly to transcriptomic phenotypes in
           disease-relevant cell models, including SCD patient HSPCs.
         </p>
       </article>
     </div>
+  </section>
+
+  <!-- RESEARCH STATEMENT -->
+  <section id="statement" class="block wrap">
+    <h2 class="section-head"><span class="tick">//</span> Research statement</h2>
+    <p class="statement-lead">
+      My doctoral research integrates experimental and computational methods to
+      decode CRISPR editing outcomes — from fine-mapping causal disease variants
+      to characterizing the unintended structural changes that determine
+      therapeutic safety. Four threads, and the tools that came out of them,
+      define the work.
+    </p>
+
+    <details class="pub-fold statement-fold">
+      <summary>
+        <span class="fold-show">Read full statement</span>
+        <span class="fold-hide">Collapse statement</span>
+        <span class="fold-icon" aria-hidden="true"></span>
+      </summary>
+
+      <div class="pub-full statement-body">
+        <article class="stmt-item">
+          <h3 class="stmt-head">Functional dissection of disease-associated variants</h3>
+          <p>
+            A central achievement of my doctoral work is a large-scale functional
+            genomics study integrating CRISPR/Cas9 nuclease and base editing with
+            single-cell RNA-seq to fine-map causal regulatory variants in IBD. I
+            developed the <span class="mono">eCROP-seq</span> platform — a
+            moderate-throughput workflow pairing lentiviral perturbation with
+            single-cell transcriptomic readouts — and applied it to interrogate
+            over 4,000 IBD-associated variant candidates across 89 genes,
+            identifying and validating more than 400 causal variants across
+            multiple immune cell types. By linking genetic perturbations directly
+            to transcriptional consequences at single-cell resolution, this is one
+            of the most comprehensive functional dissections of complex-disease
+            variants to date. The work is a co-first-authored manuscript currently
+            under revision at <span class="venue">Science</span>.
+          </p>
+        </article>
+
+        <article class="stmt-item">
+          <h3 class="stmt-head">Characterizing unintended on-target editing outcomes</h3>
+          <p>
+            My second major focus is the systematic characterization of unintended
+            on-target editing outcomes — large deletions, insertions, and complex
+            rearrangements invisible to conventional short-read sequencing. I built
+            <span class="mono">LV_caller</span>, a pipeline leveraging PacBio SMRT
+            sequencing to sensitively and quantitatively profile structural variants
+            at editing sites. Applied to edited HSPCs from SCD patients, it revealed
+            that large deletions occur at high frequencies, challenging the
+            prevailing assumption that such events are rare
+            (<span class="venue">Science Advances</span>, 2022) and shifting how the
+            field evaluates therapeutic editing safety. I extended the method to a
+            Sickle-HUDEP2 reporter model
+            (<span class="venue">Mol Ther Nucleic Acids</span>, 2026), in vivo base
+            editing of <em>LPA</em> in transgenic mice
+            (<span class="venue">Molecular Therapy</span>, 2026), and a comparative
+            study of Cas orthologs (under revision,
+            <span class="venue">Cell Biomaterials</span>, 2026), and co-authored a
+            review on CRISPR-induced modifications and their clinical implications
+            (<span class="venue">Curr Opin Biomed Eng</span>, 2023).
+          </p>
+        </article>
+
+        <article class="stmt-item">
+          <h3 class="stmt-head">Linking genotype to phenotype at single-cell resolution</h3>
+          <p>
+            I developed the <span class="mono">scGoT-EDIT</span> pipeline (single-cell
+            Genotyping of Transcriptome for EDITing outcomes), which integrates CRISPR
+            genotyping with transcriptomic profiling to link editing outcomes directly
+            to cellular phenotypes. It enables systematic mapping of
+            genotype–phenotype relationships across heterogeneous editing outcomes at
+            single-cell resolution, offering new insight into how editing influences
+            cellular fitness and differentiation. A manuscript is being finalized for
+            submission.
+          </p>
+        </article>
+
+        <article class="stmt-item">
+          <h3 class="stmt-head">Off-target prediction &amp; integration-site safety</h3>
+          <p>
+            Complementing the on-target work, I conducted systematic evaluations of
+            deep-learning models for off-target prediction, assessing generalizability
+            across independent validated datasets and identifying key limitations in
+            cross-dataset performance (<span class="venue">Small Methods</span>, 2025),
+            building on earlier transfer-learning analyses
+            (<span class="venue">bioRxiv</span>, 2021). I also developed
+            <span class="mono">GISA-seq</span> for detecting genome-wide AAV-donor
+            integration events, applying it to demonstrate the safety of the novel
+            Repair Drive method
+            (<span class="venue">Sci Transl Med</span>, 2025).
+          </p>
+        </article>
+
+        <article class="stmt-item">
+          <h3 class="stmt-head">Mentoring &amp; collaboration</h3>
+          <p>
+            Beyond my own projects, I have mentored four undergraduate and one
+            master's student in gene editing and computational biology, and provided
+            bioinformatics consultation to the Genetic Design and Engineering Center
+            at Rice and the Baylor/Rice Genome Editing Testing Center — extending the
+            impact of my work into multiple successful collaborative studies.
+          </p>
+        </article>
+      </div>
+    </details>
   </section>
 
   <!-- TOOLS -->
@@ -98,7 +205,7 @@
         <span class="tool-tag">SMRT-seq · structural variants</span>
       </li>
       <li>
-        <span class="tool-name mono">scGoT-EDIT</span>
+        <span class="tool-name mono">GoT-EDIT</span>
         <span class="tool-desc">Single-cell genotyping-to-transcriptome platform integrating CRISPR editing outcomes with 10x transcriptomic readouts.</span>
         <span class="tool-tag">single-cell · base editing</span>
       </li>
@@ -141,6 +248,52 @@
         <p class="pub-meta">De Giorgi M, Park SH, … <strong>Cao M</strong>, et al. <span class="venue">Sci Transl Med</span> 17:eadk3920 (2025).</p>
       </li>
     </ol>
+
+    <details class="pub-fold">
+      <summary>
+        <span class="fold-show">Show full publication list</span>
+        <span class="fold-hide">Hide full list</span>
+        <span class="fold-icon" aria-hidden="true"></span>
+      </summary>
+
+      <div class="pub-full">
+        <h3 class="pub-cat mono">Published</h3>
+        <ol class="pubs pubs-full">
+          <li>
+            <p class="pub-title">Cytosine base editing of <em>LPA</em> in transgenic mice averts large deletions.</p>
+            <p class="pub-meta">Chuecos MA, Park SH, … <strong>Cao M</strong>, et al. <span class="venue">Molecular Therapy</span> — in press (2026).</p>
+          </li>
+          <li>
+            <p class="pub-title">Complex HBB gene editing outcomes revealed by a fluorescent reporter cell model.</p>
+            <p class="pub-meta">Karsenty CL, Betancourth D, <strong>Cao M</strong>, et al. <span class="venue">Mol Ther Nucleic Acids</span> (2026).</p>
+          </li>
+          <li>
+            <p class="pub-title">Detection and quantification of large unintended on-target gene modifications due to CRISPR/Cas9 editing.</p>
+            <p class="pub-meta">Park SH, <strong>Cao M</strong>, Bao G. <span class="venue">Curr Opin Biomed Eng</span> 51(5):e26 (2023).</p>
+          </li>
+          <li>
+            <p class="pub-title">The need for transfer learning in CRISPR-Cas off-target scoring.</p>
+            <p class="pub-meta">Kota PK, Pan Y, Vu HA, <strong>Cao M</strong>, Baraniuk RG, Bao G. <span class="venue">bioRxiv</span> preprint (2021).</p>
+          </li>
+          <li>
+            <p class="pub-title">Bioengineering oligomerization and monomerization of enzymes: learning from natural evolution to matching industrial demands.</p>
+            <p class="pub-meta">Liu H, <strong>Cao M</strong>, Wang Y, Lv B, Li C. <span class="venue">Crit Rev Biotechnol</span> (2019).</p>
+          </li>
+          <li>
+            <p class="pub-title">Strategies and application of highly efficient secretion of proteins by microorganisms.</p>
+            <p class="pub-meta">Zhang Z, <strong>Cao M</strong>, Li J, Li C, Liu H. <span class="venue">Chem Ind Eng Prog</span> [Chinese] (2017).</p>
+          </li>
+        </ol>
+
+        <h3 class="pub-cat mono">Under revision</h3>
+        <ol class="pubs pubs-full">
+          <li>
+            <p class="pub-title">SaCas9 and AsCas12a have highly efficient and specific gene editing in hematopoietic stem and progenitor cells.</p>
+            <p class="pub-meta">Yoo BY, <strong>Cao M</strong>, Karsenty C, et al. <span class="venue">Cell Biomaterials</span> — under revision (2026).</p>
+          </li>
+        </ol>
+      </div>
+    </details>
   </section>
 
 </main>

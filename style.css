@@ -229,6 +229,86 @@ a { color: var(--ink); text-decoration: none; }
 .pub-meta { margin: 0; color: var(--ink-soft); font-size: .92rem; }
 .venue { font-style: italic; color: var(--ink); }
 
+/* ---------- foldable full publication list ---------- */
+.pub-fold {
+  margin-top: 1.6rem;
+}
+.pub-fold summary {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: .85rem;
+  color: var(--signal);
+  padding: .5rem 0;
+  list-style: none;
+  user-select: none;
+  width: fit-content;
+}
+.pub-fold summary::-webkit-details-marker { display: none; }
+.pub-fold summary:hover { color: var(--ink); }
+.fold-hide { display: none; }
+.pub-fold[open] .fold-show { display: none; }
+.pub-fold[open] .fold-hide { display: inline; }
+.fold-icon {
+  width: .62rem; height: .62rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform .2s ease;
+  margin-top: -.25rem;
+}
+.pub-fold[open] .fold-icon { transform: rotate(-135deg); margin-top: .15rem; }
+
+.pub-full {
+  margin-top: .8rem;
+  border-left: 2px solid var(--signal-dim);
+  padding-left: 1.4rem;
+  animation: fold-in .25s ease;
+}
+@keyframes fold-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.pub-cat {
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  margin: 1.4rem 0 .2rem;
+}
+.pub-cat:first-child { margin-top: 0; }
+.pubs-full { counter-reset: none; }
+.pubs-full li { padding-left: 0; }
+.pubs-full li::before { content: none; }
+
+/* ---------- research statement ---------- */
+.statement-lead {
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 54ch;
+  margin: 0 0 1.6rem;
+}
+.statement-fold { margin-top: 0; }
+.statement-body { animation: fold-in .25s ease; }
+.stmt-item { padding: 1.4rem 0; border-bottom: 1px solid var(--rule); }
+.stmt-item:first-child { padding-top: .4rem; }
+.stmt-item:last-child { border-bottom: none; padding-bottom: .4rem; }
+.stmt-head {
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin: 0 0 .6rem;
+}
+.stmt-item p {
+  margin: 0;
+  color: var(--ink-soft);
+  max-width: 68ch;
+}
+.stmt-item .mono { color: var(--signal); }
+
 /* ---------- utility ---------- */
 .mono { font-family: var(--mono); font-size: .95em; }
 
