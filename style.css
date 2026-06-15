@@ -1,0 +1,258 @@
+/* =========================================================
+   Mingming Cao — personal site
+   Aesthetic: quiet instrument panel. Near-monochrome paper,
+   a single signal-green accent (sequencing readout), mono
+   utility face for tool names and labels.
+   ========================================================= */
+
+:root {
+  --paper:      #fbfaf7;
+  --ink:        #1a1c1a;
+  --ink-soft:   #4a4f4a;
+  --ink-faint:  #8a8f88;
+  --rule:       #e3e1da;
+  --signal:     #1f8a4c;   /* signal green accent */
+  --signal-dim: #e7f1ea;
+
+  --display: "Fraunces", Georgia, serif;
+  --body:    "Inter", system-ui, sans-serif;
+  --mono:    "JetBrains Mono", ui-monospace, monospace;
+
+  --measure: 64rem;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding-inline: 1.6rem;
+}
+
+a { color: var(--ink); text-decoration: none; }
+
+.skip {
+  position: absolute;
+  left: -9999px;
+}
+.skip:focus {
+  left: 1rem; top: 1rem;
+  background: var(--ink); color: var(--paper);
+  padding: .6rem 1rem; z-index: 100; border-radius: 4px;
+}
+
+/* ---------- top bar ---------- */
+.topbar {
+  border-bottom: 1px solid var(--rule);
+  position: sticky; top: 0;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+.topbar-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.brand {
+  font-family: var(--mono);
+  font-weight: 500;
+  letter-spacing: .15em;
+  border: 1px solid var(--ink);
+  padding: .25rem .5rem;
+  font-size: .85rem;
+}
+.topbar nav {
+  display: flex; gap: 1.6rem;
+  font-size: .92rem;
+}
+.topbar nav a {
+  color: var(--ink-soft);
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+.topbar nav a:hover { color: var(--ink); }
+.topbar nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--signal);
+}
+
+/* ---------- hero ---------- */
+.hero {
+  padding-block: clamp(3.5rem, 9vw, 7rem) clamp(2.5rem, 6vw, 4rem);
+}
+.eyebrow {
+  font-family: var(--mono);
+  font-size: .8rem;
+  letter-spacing: .04em;
+  color: var(--ink-faint);
+  margin: 0 0 1.2rem;
+}
+.hero h1 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(3rem, 9vw, 5.5rem);
+  line-height: .98;
+  letter-spacing: -.02em;
+  margin: 0 0 1.4rem;
+}
+.lede {
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  line-height: 1.45;
+  max-width: 38ch;
+  color: var(--ink-soft);
+  margin: 0 0 2.2rem;
+}
+.lede em {
+  font-style: italic;
+  color: var(--ink);
+  box-shadow: inset 0 -.45em 0 var(--signal-dim);
+}
+.links {
+  display: flex; flex-wrap: wrap; gap: .5rem 1.4rem;
+  font-family: var(--mono);
+  font-size: .9rem;
+}
+.links a {
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2px;
+  transition: color .15s, border-color .15s;
+}
+.links a:hover { color: var(--signal); border-bottom-color: var(--signal); }
+
+/* ---------- section scaffolding ---------- */
+.block {
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+  border-top: 1px solid var(--rule);
+}
+.section-head {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  letter-spacing: -.01em;
+  margin: 0 0 .8rem;
+}
+.tick {
+  font-family: var(--mono);
+  color: var(--signal);
+  font-size: .7em;
+  vertical-align: .25em;
+  margin-right: .4rem;
+}
+.section-intro {
+  color: var(--ink-soft);
+  max-width: 56ch;
+  margin: 0 0 2.4rem;
+}
+
+/* ---------- research threads ---------- */
+.threads {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.6rem;
+}
+.thread {
+  border-top: 2px solid var(--ink);
+  padding-top: 1rem;
+}
+.thread h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 .6rem;
+}
+.thread p { margin: 0; color: var(--ink-soft); font-size: .98rem; }
+
+/* ---------- tools ---------- */
+.tools-list { list-style: none; margin: 0; padding: 0; }
+.tools-list li {
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  gap: .4rem 2rem;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.tools-list li:first-child { border-top: 1px solid var(--rule); }
+.tool-name {
+  font-size: 1.02rem;
+  font-weight: 500;
+  color: var(--signal);
+  align-self: start;
+}
+.tool-desc { color: var(--ink-soft); font-size: .98rem; }
+.tool-tag {
+  grid-column: 2;
+  font-family: var(--mono);
+  font-size: .76rem;
+  color: var(--ink-faint);
+  letter-spacing: .02em;
+}
+
+/* ---------- publications ---------- */
+.pubs {
+  margin: 0; padding: 0;
+  list-style: none;
+  counter-reset: pub;
+}
+.pubs li {
+  counter-increment: pub;
+  position: relative;
+  padding: 1.1rem 0 1.1rem 3rem;
+  border-bottom: 1px solid var(--rule);
+}
+.pubs li::before {
+  content: counter(pub, decimal-leading-zero);
+  position: absolute; left: 0; top: 1.15rem;
+  font-family: var(--mono);
+  font-size: .8rem;
+  color: var(--ink-faint);
+}
+.pub-title { margin: 0 0 .25rem; font-weight: 500; }
+.pub-meta { margin: 0; color: var(--ink-soft); font-size: .92rem; }
+.venue { font-style: italic; color: var(--ink); }
+
+/* ---------- utility ---------- */
+.mono { font-family: var(--mono); font-size: .95em; }
+
+/* ---------- footer ---------- */
+footer {
+  border-top: 1px solid var(--rule);
+  padding-block: 2.4rem 3rem;
+  color: var(--ink-faint);
+  font-size: .88rem;
+}
+footer p { margin: 0 0 .3rem; }
+.footer-sub { font-size: .8rem; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 640px) {
+  .topbar nav { gap: 1rem; font-size: .82rem; }
+  .topbar nav a:nth-child(2) { display: none; } /* hide Research on tiny screens to fit */
+  .tools-list li { grid-template-columns: 1fr; gap: .35rem; }
+  .tool-tag { grid-column: 1; }
+}
+
+/* keyboard focus visibility */
+a:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
