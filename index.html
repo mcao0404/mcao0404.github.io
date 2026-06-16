@@ -60,35 +60,40 @@
       My doctoral work in the Bao Lab integrates wet-lab and computational
       methods to decode <em>CRISPR editing outcomes</em> across <em>human disease models</em> —
       from fine-mapping causal disease variants to characterizing the unintended
-      structural changes that determine therapeutic safety. Three threads, and
-      the tools that came out of them, run through it.
+      structural changes that determine therapeutic safety.
     </p>
 
     <div class="threads">
       <article class="thread">
+        <img class="thread-fig" src="images/research/research1.png" alt="Diagram: base-editing functional screen mapping regulatory variants across immune cell types" loading="lazy">
         <h3>Regulatory variant function</h3>
         <p>
           A CRISPR/Cas9 functional screen (<span class="mono">eCROP-seq</span>)
-          that fine-maps causal eQTL variants across immune cell contexts,
-          linking genotype to expression at single-cell resolution. Causal variants
-          were further validated through base editing.
-          <span class="tool-tag"> · Inflammatory Bowel Disease (IBD)</span>
+          that fine-maps candidate causal IBD eQTL variants across immune cell
+          contexts, linking genotype to expression at single-cell resolution.
+          These variants were further validated through base editing individually.
+          This work demonstrates that regulatory associations often reflect
+          multiple causal variants on a shared haplotype, not the single variant
+          typically assumed.
         </p>
       </article>
       <article class="thread">
+        <img class="thread-fig" src="images/research/research2.png" alt="Diagram: unintended on-target and off-target editing outcomes profiled by long-read sequencing and deep learning" loading="lazy">
         <h3>Editing safety &amp; fidelity</h3>
         <p>
-          Long-read sequencing to detect large unintended gene modifications,
-          plus deep-learning benchmarks for off-target prediction — building a
-          rigorous picture of editing precision at therapeutic loci.
+          Long-read sequencing (SMRT-seq) to detect and quantify large unintended
+          gene modifications, plus deep-learning benchmarks for off-target
+          prediction — building a rigorous picture of editing precision at
+          therapeutic loci.
         </p>
       </article>
       <article class="thread">
+        <img class="thread-fig" src="images/research/research3.png" alt="Diagram: single-cell genotyping linking diverse editing outcomes to transcriptomic phenotypes" loading="lazy">
         <h3>Genotype-to-transcriptome</h3>
         <p>
           <span class="mono">scGoT-EDIT</span>, a single-cell platform that connects
-          CRISPR editing outcomes directly to transcriptomic phenotypes in
-          disease-relevant cell models, including SCD patient HSPCs.
+          highly diverse CRISPR editing outcomes directly to transcriptomic
+          phenotypes in disease-relevant cell models.
         </p>
       </article>
     </div>
@@ -102,22 +107,29 @@
 
       <div class="pub-full statement-body">
         <article class="stmt-item">
-          <h3 class="stmt-head">Functional dissection of IBD disease-associated variants</h3>
+          <h3 class="stmt-head">Functional dissection of IBD variants reveals haplotype-embedded regulatory variation</h3>
           <p>
             A central achievement of my doctoral work is a large-scale functional
             genomics study integrating CRISPR/Cas9 nuclease and base editing with
-            single-cell RNA-seq to fine-map causal regulatory variants in IBD. I
-            developed a moderate-throughput workflow of the <span class="mono">eCROP-seq</span> 
-            platform, pairing lentiviral perturbation with single-cell 
-            transcriptomic readouts, and applied it to interrogate
-            over 4,000 IBD-associated variant candidates across 89 genes,
-            identifying and validating more than 400 causal variants across
-            multiple immune cell types. By linking genetic perturbations directly
-            to transcriptional consequences at single-cell resolution, this is one
-            of the most comprehensive functional dissections of complex-disease
-            variants to date. The work is a co-first-authored manuscript currently
+            bulk- and single-cell RNA-seq to fine-map causal regulatory variants in
+            Inflammatory Bowel Disease (IBD). We developed a moderate-throughput
+            workflow of the <span class="mono">eCROP-seq</span> platform, pairing
+            lentiviral perturbation with single-cell transcriptomic readouts, and
+            applied it to interrogate over 4,000 IBD-associated variant candidates
+            across 89 genes, identifying and validating more than 400 causal variants
+            across multiple immune cell types. By comprehensively linking genetic
+            perturbations directly to transcriptional consequences at single-cell
+            resolution, we demonstrate that regulatory associations often reflect
+            multiple causal variants on a shared haplotype, not the single variant
+            typically assumed. The work is a co-first-authored manuscript currently
             under revision at <span class="venue">Science</span>.
           </p>
+          <div class="stmt-tags">
+            <span class="stmt-tag">CRISPR/Cas9 Functional Screen</span>
+            <span class="stmt-tag">Base Editing</span>
+            <span class="stmt-tag">Inflammatory Bowel Disease (IBD)</span>
+            <span class="stmt-tag">eQTL</span>
+          </div>
         </article>
 
         <article class="stmt-item">
@@ -125,37 +137,30 @@
           <p>
             My second major focus is the systematic characterization of unintended
             on-target editing outcomes — large deletions, insertions, and complex
-            rearrangements invisible to conventional short-read sequencing. I built
+            rearrangements invisible to conventional short-read sequencing (NGS). I built
             <span class="mono">LV_caller</span>, a pipeline leveraging PacBio SMRT
-            sequencing to sensitively and quantitatively profile structural variants
-            at editing sites. Applied to edited HSPCs from SCD patients, it revealed
-            that large deletions occur at high frequencies, challenging the
-            prevailing assumption that such events are rare
+            sequencing to sensitively and quantitatively profile large deletions and
+            large insertions at editing sites. Applied to edited Hematopoietic Stem
+            and Progenitor Cells (HSPCs) from Sickle Cell Disease (SCD) patients, it
+            revealed that large deletions occur at high frequencies, challenging the
+            prevailing assumption that such events were rare
             (<span class="venue">Science Advances</span>, 2022) and shifting how the
             field evaluates therapeutic editing safety. I extended the method to a
             Sickle-HUDEP2 reporter model
             (<span class="venue">Mol Ther Nucleic Acids</span>, 2026), in vivo base
             editing of <em>LPA</em> in transgenic mice
             (<span class="venue">Molecular Therapy</span>, 2026), and a comparative
-            study of Cas orthologs (under revision,
-            <span class="venue">Cell Biomaterials</span>, 2026), and co-authored a
-            review on CRISPR-induced modifications and their clinical implications
-            (<span class="venue">Curr Opin Biomed Eng</span>, 2023).
+            study of Cas orthologs (<span class="venue">Cell Biomaterials</span>, 2026),
+            and co-authored a review on CRISPR-induced modifications and their clinical
+            implications (<span class="venue">Curr Opin Biomed Eng</span>, 2023).
           </p>
-        </article>
-
-        <article class="stmt-item">
-          <h3 class="stmt-head">Linking genotype to phenotype at single-cell resolution</h3>
-          <p>
-            I developed the <span class="mono">scGoT-EDIT</span> pipeline (single-cell
-            Genotyping of Transcriptome for EDITing outcomes), which integrates CRISPR
-            genotyping with transcriptomic profiling to link editing outcomes directly
-            to cellular phenotypes. It enables systematic mapping of
-            genotype–phenotype relationships across heterogeneous editing outcomes at
-            single-cell resolution, offering new insight into how editing influences
-            cellular fitness and differentiation. A manuscript is being finalized for
-            submission.
-          </p>
+          <div class="stmt-tags">
+            <span class="stmt-tag">Long-read Sequencing</span>
+            <span class="stmt-tag">Large Gene Modifications</span>
+            <span class="stmt-tag">SCD</span>
+            <span class="stmt-tag">HSPCs</span>
+            <span class="stmt-tag">SHUDEP2</span>
+          </div>
         </article>
 
         <article class="stmt-item">
@@ -172,15 +177,43 @@
             Repair Drive method
             (<span class="venue">Sci Transl Med</span>, 2025).
           </p>
+          <div class="stmt-tags">
+            <span class="stmt-tag">Deep-learning models</span>
+            <span class="stmt-tag">AAV integration</span>
+          </div>
         </article>
 
         <article class="stmt-item">
-          <h3 class="stmt-head">Collaborations</h3>
+          <h3 class="stmt-head">Linking genotype to phenotype at single-cell resolution</h3>
           <p>
-            Beyond my own projects, I provided bioinformatics consultation to
-            the Genetic Design and Engineering Center at Rice and the Baylor/Rice 
-            Genome Editing Testing Center — extending the impact of my work into 
-            multiple successful collaborative studies.
+            I developed the <span class="mono">scGoT-EDIT</span> pipeline (single-cell
+            Genotyping of Transcriptome for EDITing outcomes), which integrates CRISPR
+            genotyping with transcriptomic profiling to link diverse editing outcomes
+            directly to cellular phenotypes. It enables systematic mapping of
+            genotype–phenotype relationships across heterogeneous editing outcomes at
+            single-cell resolution, offering new insight into how editing influences
+            cellular fitness, differentiation and selection. The manuscript has been
+            submitted and under review.
+          </p>
+          <div class="stmt-tags">
+            <span class="stmt-tag">Single-cell RNA-seq</span>
+            <span class="stmt-tag">CRISPR-Cas9-mediated homology-directed repair (HDR)</span>
+            <span class="stmt-tag">Base Editing</span>
+            <span class="stmt-tag">SCD and HSPCs</span>
+            <span class="stmt-tag">B2M and Primary T cell</span>
+          </div>
+        </article>
+
+        <article class="stmt-item">
+          <h3 class="stmt-head">Other Collaborations</h3>
+          <p>
+            Beyond my individual research contributions, I have mentored four
+            undergraduate and one master's students in gene editing and computational
+            biology, and have provided bioinformatics consultation to the Genetic
+            Design and Engineering Center (GETC) at Rice and Baylor/Rice Genome Editing
+            Testing Center (GETC). These efforts have extended the impact of my work
+            beyond my own research projects and contributed to multiple successful
+            collaborative studies.
           </p>
         </article>
       </div>
@@ -196,24 +229,24 @@
 
     <ul class="tools-list">
       <li>
-        <span class="tool-name mono">LV_caller</span>
-        <span class="tool-desc">Long-read pipeline for detecting and quantifying large unintended gene modifications (deletions, insertions, inversions) from CRISPR/Cas9 editing.</span>
-        <span class="tool-tag">SMRT-seq · structural variants</span>
-      </li>
-      <li>
-        <span class="tool-name mono">scGoT-EDIT</span>
-        <span class="tool-desc">Single-cell genotyping-to-transcriptome platform integrating CRISPR editing outcomes with 10x transcriptomic readouts.</span>
-        <span class="tool-tag">single-cell RNA-seq</span>
-      </li>
-      <li>
         <span class="tool-name mono">eCROP-seq</span>
         <span class="tool-desc">Moderate-throughput expression-CRISPR droplet screen for functional fine-mapping of disease-associated regulatory variants.</span>
-        <span class="tool-tag">functional screen · eQTL</span>
+        <span class="tool-tag">Wet-lab · Functional Screen · eQTL · Single-cell RNA-seq</span>
+      </li>
+      <li>
+        <span class="tool-name mono">LV_caller</span>
+        <span class="tool-desc">Long-read pipeline for detecting and quantifying large unintended gene modifications (deletions, insertions, inversions) from CRISPR/Cas9 editing.</span>
+        <span class="tool-tag">Computational · SMRT-seq · Large Gene Modifications</span>
       </li>
       <li>
         <span class="tool-name mono">GISA-seq</span>
         <span class="tool-desc">Anchored-PCR NGS assay with UMI-tagged adapters for unbiased genome-wide retrieval of AAV-donor integration sites.</span>
-        <span class="tool-tag">integration sites · safety</span>
+        <span class="tool-tag">Computational · NGS · AAV Integration Sites</span>
+      </li>
+      <li>
+        <span class="tool-name mono">scGoT-EDIT</span>
+        <span class="tool-desc">Single-cell genotyping-to-transcriptome platform integrating CRISPR editing outcomes with 10x transcriptomic readouts.</span>
+        <span class="tool-tag">Computational and Wet-lab · Single-cell Genotyping and RNA-seq</span>
       </li>
     </ul>
   </section>
@@ -229,7 +262,7 @@
     <ol class="pubs">
       <li>
         <p class="pub-title">Haplotype-embedded regulatory variation shapes gene expression and immune associations.</p>
-        <p class="pub-meta">Iannetta E<span class="mono">†</span>, <strong>Cao M</strong><span class="mono">†</span>, et al. <span class="venue">Science</span> — under revision (2026).</p>
+        <p class="pub-meta">Iannetta E<span class="mono">†</span>, <strong>Cao M</strong><span class="mono">†</span>, et al. <span class="venue">Science</span> — under revision (2026). <span class="pub-doi">bioRxiv: <a href="https://doi.org/10.1101/2025.01.30.635675" target="_blank" rel="noopener">10.1101/2025.01.30.635675</a></span></p>
       </li>
       <li>
         <p class="pub-title">Comprehensive analysis of unintended large gene modifications induced by CRISPR/Cas9 gene editing.</p>
@@ -286,6 +319,10 @@
           <li>
             <p class="pub-title">SaCas9 and AsCas12a have highly efficient and specific gene editing in hematopoietic stem and progenitor cells.</p>
             <p class="pub-meta">Yoo BY, <strong>Cao M</strong>, Karsenty C, et al. <span class="venue">Cell Biomaterials</span> — under revision (2026).</p>
+          </li>
+          <li>
+            <p class="pub-title">Highly efficient targeted gene insertion in hPSCs by homology-directed repair for modeling and treating cystic fibrosis.</p>
+            <p class="pub-meta">Khondaker I, Prasca-Chamorro D, Rapalo-Guerrero J, Lu X, Park SH, <strong>Cao M</strong>, Bao G. <span class="venue">Journal of Cystic Fibrosis</span> — under revision (2026).</p>
           </li>
         </ol>
       </div>
