@@ -300,14 +300,23 @@ a { color: var(--ink); text-decoration: none; }
   margin-top: 2rem;
 }
 .pub-fold summary {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  cursor: pointer;
+  font-family: var(--mono);
   font-size: .95rem;
   font-weight: 500;
+  color: var(--signal);
   padding: .7rem 1.1rem;
   border: 1px solid var(--signal);
   border-radius: 4px;
   background: var(--signal-dim);
   width: fit-content;
+  list-style: none;
+  user-select: none;
 }
+.pub-fold summary::-webkit-details-marker { display: none; }
 .pub-fold summary:hover {
   background: var(--signal);
   color: var(--paper);
