@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mingming Cao — Gallery</title>
+<meta name="description" content="Photography by Mingming Cao — a personal photo gallery.">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html">MC</a>
+    <nav aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#tools">Tools</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="gallery.html" aria-current="page">Gallery</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- PHOTO GALLERY -->
+  <!--
+    TO ADD YOUR PHOTOS:
+    1. Put image files in the  images/gallery/  folder in your repo.
+    2. For each photo, copy one <figure> block below and edit:
+         - src        = path to your file (e.g. images/gallery/sunset.jpg)
+         - alt        = short description (for accessibility)
+         - figcaption = caption shown under the photo
+    3. Delete any blocks you don't use.
+    Photos are shown at a uniform height and arranged automatically.
+  -->
+  <section id="gallery" class="block wrap">
+    <h2 class="section-head"><span class="tick">//</span> Photo gallery</h2>
+    <p class="section-intro">
+      Away from the bench — a few frames from things I've pointed a camera at.
+    </p>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item">
+        <img src="images/gallery/photo1.jpg" alt="Garner State Park" loading="lazy">
+        <figcaption>Garner State Park</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gallery/photo2.jpg" alt="Moon above a tree" loading="lazy">
+        <figcaption>Moon Above A Tree</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gallery/photo3.jpg" alt="Moon behind a tree" loading="lazy">
+        <figcaption>Moon Behind A Tree</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gallery/photo4.jpg" alt="Raccoon" loading="lazy">
+        <figcaption>Raccoon</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gallery/photo5.jpg" alt="Puerto Rico" loading="lazy">
+        <figcaption>Puerto Rico</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gallery/photo6.jpg" alt="Bluebonnet" loading="lazy">
+        <figcaption>Bluebonnet</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gallery/photo7.jpg" alt="Puerto Rico" loading="lazy">
+        <figcaption>Puerto Rico</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gallery/photo8.jpg" alt="Snow in Alaska" loading="lazy">
+        <figcaption>Snow in Alaska</figcaption>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>Mingming Cao · Department of Bioengineering, Rice University · Houston, TX</p>
+  <p class="footer-sub mono">last updated 2026</p>
+</footer>
+
+</body>
+</html>
