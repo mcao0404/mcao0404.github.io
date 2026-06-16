@@ -358,7 +358,21 @@ a { color: var(--ink); text-decoration: none; }
   max-width: 54ch;
   margin: 0 0 1.6rem;
 }
-.statement-fold { margin-top: 0; }
+.statement-fold {
+  margin-top: 2rem;
+}
+.statement-fold summary {
+  font-size: .95rem;
+  font-weight: 500;
+  padding: .7rem 1.1rem;
+  border: 1px solid var(--signal);
+  border-radius: 4px;
+  background: var(--signal-dim);
+}
+.statement-fold summary:hover {
+  background: var(--signal);
+  color: var(--paper);
+}
 .statement-body { animation: fold-in .25s ease; }
 .stmt-item { padding: 1.4rem 0; border-bottom: 1px solid var(--rule); }
 .stmt-item:first-child { padding-top: .4rem; }
