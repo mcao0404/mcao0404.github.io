@@ -10,6 +10,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="icon.png">
+<style>
+  /* GitHub repo links beneath each tool (Tools section) */
+  .tool-repo {
+    display: block;
+    margin-top: 0.5em;
+    color: inherit;          /* matches the muted tag colour by default */
+    text-decoration: none;
+  }
+  a.tool-repo:hover,
+  a.tool-repo:focus-visible {
+    color: #2f9e44;          /* signal-green on hover — set to your exact accent */
+  }
+  .tool-repo.pending {
+    opacity: 0.6;            /* dimmer, non-clickable placeholder */
+  }
+</style>
 </head>
 <body>
 
@@ -210,22 +226,22 @@
       <li>
         <span class="tool-name mono">eCROP-seq</span>
         <span class="tool-desc">Moderate-throughput expression-CRISPR droplet screen for functional fine-mapping of disease-associated regulatory variants.</span>
-        <span class="tool-tag">Wet-lab · Functional Screen · eQTL · Single-cell RNA-seq</span>
+        <span class="tool-tag">Wet-lab · Functional Screen · eQTL · Single-cell RNA-seq<span class="tool-repo pending">GitHub link is pending.</span></span>
       </li>
       <li>
         <span class="tool-name mono">LV_caller</span>
         <span class="tool-desc">Long-read pipeline for detecting and quantifying large unintended gene modifications (deletions, insertions, inversions) from CRISPR/Cas9 editing.</span>
-        <span class="tool-tag">Computational · SMRT-seq · Large Gene Modifications</span>
+        <span class="tool-tag">Computational · SMRT-seq · Large Gene Modifications<a class="tool-repo" href="https://github.com/baolab-rice/LV_caller" target="_blank" rel="noopener">baolab-rice/LV_caller ↗</a></span>
       </li>
       <li>
         <span class="tool-name mono">GISA-seq</span>
         <span class="tool-desc">Anchored-PCR NGS assay with UMI-tagged adapters for unbiased genome-wide retrieval of AAV-donor integration sites.</span>
-        <span class="tool-tag">Computational · NGS · AAV Integration Sites</span>
+        <span class="tool-tag">Computational · NGS · AAV Integration Sites<a class="tool-repo" href="https://github.com/baolab-rice/GISA-seq" target="_blank" rel="noopener">baolab-rice/GISA-seq ↗</a></span>
       </li>
       <li>
         <span class="tool-name mono">scGoT-EDIT</span>
         <span class="tool-desc">Single-cell genotyping-to-transcriptome platform integrating CRISPR editing outcomes with 10x transcriptomic readouts.</span>
-        <span class="tool-tag">Computational and Wet-lab · Single-cell Genotyping and RNA-seq</span>
+        <span class="tool-tag">Computational and Wet-lab · Single-cell Genotyping and RNA-seq<span class="tool-repo pending">GitHub link is pending.</span></span>
       </li>
     </ul>
   </section>
