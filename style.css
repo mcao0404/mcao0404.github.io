@@ -364,6 +364,15 @@ a { color: var(--ink); text-decoration: none; }
 }
 .pub-title { margin: 0 0 .25rem; font-weight: 500; }
 .pub-meta { margin: 0; color: var(--ink-soft); font-size: .92rem; }
+.pub-meta strong {
+  font-weight: 700;
+  font-style: italic;
+  color: #000;
+}
+:root[data-theme="dark"] .pub-meta strong { color: #fff; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .pub-meta strong { color: #fff; }
+}
 .venue { font-style: italic; color: var(--ink); }
 
 /* ---------- foldable full publication list ---------- */
