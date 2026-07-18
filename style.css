@@ -21,6 +21,32 @@
   --measure: 64rem;
 }
 
+/* ---------- dark theme ----------
+   Same instrument-panel logic, inverted: dark bezel, signal green
+   readout brightened slightly so it still reads as the accent.
+   Applies when explicitly toggled ([data-theme="dark"]) or, absent
+   an explicit choice, when the system is in dark mode. */
+:root[data-theme="dark"] {
+  --paper:      #17181a;
+  --ink:        #ececea;
+  --ink-soft:   #a7ada6;
+  --ink-faint:  #6d736c;
+  --rule:       #2a2c28;
+  --signal:     #34c07a;
+  --signal-dim: #1b3524;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:      #17181a;
+    --ink:        #ececea;
+    --ink-soft:   #a7ada6;
+    --ink-faint:  #6d736c;
+    --rule:       #2a2c28;
+    --signal:     #34c07a;
+    --signal-dim: #1b3524;
+  }
+}
+
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -38,6 +64,7 @@ body {
   font-size: 1.05rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  transition: background-color .2s ease, color .2s ease;
 }
 
 .wrap {
@@ -94,6 +121,38 @@ a { color: var(--ink); text-decoration: none; }
   color: var(--ink);
   border-bottom-color: var(--signal);
 }
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+/* ---------- theme toggle ---------- */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  padding: 0;
+  transition: color .15s, border-color .15s, background .15s;
+}
+.theme-toggle:hover {
+  color: var(--signal);
+  border-color: var(--signal);
+  background: var(--signal-dim);
+}
+.theme-toggle svg { width: 17px; height: 17px; display: block; }
+.theme-toggle .icon-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
 
 /* ---------- hero ---------- */
 .hero {
@@ -239,6 +298,18 @@ a { color: var(--ink); text-decoration: none; }
   margin: 0 auto 1rem;
   border-radius: 3px;
   mix-blend-mode: multiply;
+}
+:root[data-theme="dark"] .thread-fig {
+  background: #f2f1ec;
+  padding: .5rem;
+  mix-blend-mode: normal;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .thread-fig {
+    background: #f2f1ec;
+    padding: .5rem;
+    mix-blend-mode: normal;
+  }
 }
 .thread h3 {
   font-size: 1.1rem;
@@ -411,6 +482,7 @@ footer p { margin: 0 0 .3rem; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 640px) {
+  .topbar-right { gap: .9rem; }
   .topbar nav { gap: 1rem; font-size: .82rem; }
   .topbar nav a:nth-child(2), /* Research */
   .topbar nav a:nth-child(3) { display: none; } /* Tools — both reachable by scroll */
