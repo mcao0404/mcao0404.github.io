@@ -95,13 +95,12 @@
       <img src="images/profile.png" alt="Mingming Cao" width="320" height="400">
     </figure>
   </section>
-
-  <!-- RESEARCH -->
+<!-- RESEARCH -->
   <section id="research" class="block wrap">
     <h2 class="section-head"><span class="tick">//</span> Research</h2>
     <p class="section-intro">
       My doctoral work in the <a href="https://bao-lab.org/"><span style="text-decoration: underline;">Bao Lab</span></a> integrates wet-lab and computational
-      methods to decode <span style="color: salmon; font-weight: bold; font-style: italic;">CRISPR editing outcomes</span> across 
+      methods to decode <span style="color: salmon; font-weight: bold; font-style: italic;">CRISPR editing outcomes</span> across
       <span style="color: salmon; font-weight: bold; font-style: italic;">human disease models</span> —
       from fine-mapping causal disease variants to characterizing the unintended
       structural changes that determine therapeutic safety. Three major threads are listed below.
@@ -118,112 +117,138 @@
           editing — revealing that regulatory associations often reflect multiple
           causal variants on a shared haplotype.
         </p>
+        <details class="thread-more">
+          <summary>
+            <span class="fold-show">Read more</span>
+            <span class="fold-hide">Show less</span>
+            <span class="fold-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="thread-detail">
+            <article class="stmt-item">
+              <h4 class="stmt-head">Functional dissection of IBD variants reveals haplotype-embedded regulatory variation</h4>
+              <p>
+                A central achievement of my doctoral work is a large-scale functional
+                genomics study integrating CRISPR/Cas9 nuclease and base editing with
+                bulk- and single-cell RNA-seq to fine-map causal regulatory variants in
+                Inflammatory Bowel Disease (IBD). We developed a moderate-throughput
+                workflow of the <span class="mono">eCROP-seq</span> platform, pairing
+                lentiviral perturbation with single-cell transcriptomic readouts, and
+                applied it to interrogate over 4,000 IBD-associated variant candidates
+                across 89 genes, identifying and validating more than 400 causal variants
+                across multiple immune cell types. By comprehensively linking genetic
+                perturbations directly to transcriptional consequences at single-cell
+                resolution, we demonstrate that regulatory associations often reflect
+                multiple causal variants on a shared haplotype, not the single variant
+                typically assumed. The work is a co-first-authored manuscript currently
+                under revision at <span class="venue">Science</span>.
+              </p>
+              <span class="tool-tag">CRISPR/Cas9 Functional Screen · Base Editing · Inflammatory Bowel Disease (IBD) · eQTL</span>
+            </article>
+          </div>
+        </details>
       </article>
+
       <article class="thread">
         <img class="thread-fig" src="images/research/research2.png" alt="Diagram: unintended on-target and off-target editing outcomes profiled by long-read sequencing and deep learning" loading="lazy">
         <h3>Editing safety &amp; fidelity</h3>
         <p>
-          Developed <span class="mono">LV_caller</span> that uses long-read sequencing (SMRT-seq) to detect 
-          and quantify large unintended gene modifications, paired with deep-learning benchmarks 
+          Developed <span class="mono">LV_caller</span> that uses long-read sequencing (SMRT-seq) to detect
+          and quantify large unintended gene modifications, paired with deep-learning benchmarks
           for off-target prediction — a rigorous picture of editing precision at therapeutic loci.
         </p>
+        <details class="thread-more">
+          <summary>
+            <span class="fold-show">Read more</span>
+            <span class="fold-hide">Show less</span>
+            <span class="fold-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="thread-detail">
+            <article class="stmt-item">
+              <h4 class="stmt-head">Characterizing unintended on-target editing outcomes</h4>
+              <p>
+                My second major focus is the systematic characterization of unintended
+                on-target editing outcomes — large deletions, insertions, and complex
+                rearrangements invisible to conventional short-read sequencing (NGS). I built
+                <span class="mono">LV_caller</span>, a pipeline leveraging PacBio SMRT
+                sequencing to sensitively and quantitatively profile large deletions and
+                large insertions at editing sites. Applied to edited Hematopoietic Stem
+                and Progenitor Cells (HSPCs) from Sickle Cell Disease (SCD) patients, it
+                revealed that large deletions occur at high frequencies, challenging the
+                prevailing assumption that such events were rare
+                (<span class="venue">Science Advances</span>, 2022) and shifting how the
+                field evaluates therapeutic editing safety. I extended the method to a
+                Sickle-HUDEP2 reporter model
+                (<span class="venue">Mol Ther Nucleic Acids</span>, 2026), in vivo base
+                editing of <em>LPA</em> in transgenic mice
+                (<span class="venue">Molecular Therapy</span>, 2026), and a comparative
+                study of Cas orthologs (<span class="venue">Cell Biomaterials</span>, 2026),
+                and co-authored a review on CRISPR-induced modifications and their clinical
+                implications (<span class="venue">Curr Opin Biomed Eng</span>, 2023).
+              </p>
+              <span class="tool-tag">Long-read Sequencing · Large Gene Modifications · SCD · HSPCs · SHUDEP2</span>
+            </article>
+
+            <article class="stmt-item">
+              <h4 class="stmt-head">Off-target prediction &amp; integration-site safety</h4>
+              <p>
+                Complementing the on-target work, I conducted systematic evaluations of
+                deep-learning models for off-target prediction, assessing generalizability
+                across independent validated datasets and identifying key limitations in
+                cross-dataset performance (<span class="venue">Small Methods</span>, 2025),
+                building on earlier transfer-learning analyses
+                (<span class="venue">bioRxiv</span>, 2021). I also developed
+                <span class="mono">GISA-seq</span> for detecting genome-wide AAV-donor
+                integration events, applying it to demonstrate the safety of the novel
+                Repair Drive method
+                (<span class="venue">Sci Transl Med</span>, 2025).
+              </p>
+              <span class="tool-tag">Deep-learning models · AAV integration</span>
+            </article>
+          </div>
+        </details>
       </article>
+
       <article class="thread">
         <img class="thread-fig" src="images/research/research3.png" alt="Diagram: single-cell genotyping linking diverse editing outcomes to transcriptomic phenotypes" loading="lazy">
         <h3>Genotype-to-transcriptome</h3>
         <p>
-          Developed <span class="mono">scGoT-EDIT</span>, a single-cell platform that connects 
-          highly diverse CRISPR editing outcomes directly to transcriptomic phenotypes 
+          Developed <span class="mono">scGoT-EDIT</span>, a single-cell platform that connects
+          highly diverse CRISPR editing outcomes directly to transcriptomic phenotypes
           in disease-relevant cell models, linking genotype to cellular fate.
         </p>
+        <details class="thread-more">
+          <summary>
+            <span class="fold-show">Read more</span>
+            <span class="fold-hide">Show less</span>
+            <span class="fold-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="thread-detail">
+            <article class="stmt-item">
+              <h4 class="stmt-head">Linking genotype to phenotype at single-cell resolution</h4>
+              <p>
+                I developed the <span class="mono">scGoT-EDIT</span> pipeline (single-cell
+                Genotyping of Transcriptome for EDITing outcomes), which integrates CRISPR
+                genotyping with transcriptomic profiling to link diverse editing outcomes
+                directly to cellular phenotypes. It enables systematic mapping of
+                genotype–phenotype relationships across heterogeneous editing outcomes at
+                single-cell resolution, offering new insight into how editing influences
+                cellular fitness, differentiation and selection. The manuscript is under revision now.
+              </p>
+              <span class="tool-tag">Single-cell RNA-seq · CRISPR-Cas9-mediated homology-directed repair (HDR) · Base Editing · SCD and HSPCs · B2M and Primary T cell</span>
+            </article>
+          </div>
+        </details>
       </article>
     </div>
 
     <details class="pub-fold statement-fold">
       <summary>
-        <span class="fold-show">Read full research statement</span>
-        <span class="fold-hide">Collapse research statement</span>
+        <span class="fold-show">Read other research statement</span>
+        <span class="fold-hide">Collapse other research statement</span>
         <span class="fold-icon" aria-hidden="true"></span>
       </summary>
 
       <div class="pub-full statement-body">
-        <article class="stmt-item">
-          <h3 class="stmt-head">Functional dissection of IBD variants reveals haplotype-embedded regulatory variation</h3>
-          <p>
-            A central achievement of my doctoral work is a large-scale functional
-            genomics study integrating CRISPR/Cas9 nuclease and base editing with
-            bulk- and single-cell RNA-seq to fine-map causal regulatory variants in
-            Inflammatory Bowel Disease (IBD). We developed a moderate-throughput
-            workflow of the <span class="mono">eCROP-seq</span> platform, pairing
-            lentiviral perturbation with single-cell transcriptomic readouts, and
-            applied it to interrogate over 4,000 IBD-associated variant candidates
-            across 89 genes, identifying and validating more than 400 causal variants
-            across multiple immune cell types. By comprehensively linking genetic
-            perturbations directly to transcriptional consequences at single-cell
-            resolution, we demonstrate that regulatory associations often reflect
-            multiple causal variants on a shared haplotype, not the single variant
-            typically assumed. The work is a co-first-authored manuscript currently
-            under revision at <span class="venue">Science</span>.
-          </p>
-            <span class="tool-tag">CRISPR/Cas9 Functional Screen · Base Editing · Inflammatory Bowel Disease (IBD) · eQTL</span>
-        </article>
-
-        <article class="stmt-item">
-          <h3 class="stmt-head">Characterizing unintended on-target editing outcomes</h3>
-          <p>
-            My second major focus is the systematic characterization of unintended
-            on-target editing outcomes — large deletions, insertions, and complex
-            rearrangements invisible to conventional short-read sequencing (NGS). I built
-            <span class="mono">LV_caller</span>, a pipeline leveraging PacBio SMRT
-            sequencing to sensitively and quantitatively profile large deletions and
-            large insertions at editing sites. Applied to edited Hematopoietic Stem
-            and Progenitor Cells (HSPCs) from Sickle Cell Disease (SCD) patients, it
-            revealed that large deletions occur at high frequencies, challenging the
-            prevailing assumption that such events were rare
-            (<span class="venue">Science Advances</span>, 2022) and shifting how the
-            field evaluates therapeutic editing safety. I extended the method to a
-            Sickle-HUDEP2 reporter model
-            (<span class="venue">Mol Ther Nucleic Acids</span>, 2026), in vivo base
-            editing of <em>LPA</em> in transgenic mice
-            (<span class="venue">Molecular Therapy</span>, 2026), and a comparative
-            study of Cas orthologs (<span class="venue">Cell Biomaterials</span>, 2026),
-            and co-authored a review on CRISPR-induced modifications and their clinical
-            implications (<span class="venue">Curr Opin Biomed Eng</span>, 2023).
-          </p>
-          <span class="tool-tag">Long-read Sequencing · Large Gene Modifications · SCD · HSPCs · SHUDEP2</span>
-        </article>
-
-        <article class="stmt-item">
-          <h3 class="stmt-head">Off-target prediction &amp; integration-site safety</h3>
-          <p>
-            Complementing the on-target work, I conducted systematic evaluations of
-            deep-learning models for off-target prediction, assessing generalizability
-            across independent validated datasets and identifying key limitations in
-            cross-dataset performance (<span class="venue">Small Methods</span>, 2025),
-            building on earlier transfer-learning analyses
-            (<span class="venue">bioRxiv</span>, 2021). I also developed
-            <span class="mono">GISA-seq</span> for detecting genome-wide AAV-donor
-            integration events, applying it to demonstrate the safety of the novel
-            Repair Drive method
-            (<span class="venue">Sci Transl Med</span>, 2025).
-          </p>
-          <span class="tool-tag">Deep-learning models · AAV integration</span>
-        </article>
-
-        <article class="stmt-item">
-          <h3 class="stmt-head">Linking genotype to phenotype at single-cell resolution</h3>
-          <p>
-            I developed the <span class="mono">scGoT-EDIT</span> pipeline (single-cell
-            Genotyping of Transcriptome for EDITing outcomes), which integrates CRISPR
-            genotyping with transcriptomic profiling to link diverse editing outcomes
-            directly to cellular phenotypes. It enables systematic mapping of
-            genotype–phenotype relationships across heterogeneous editing outcomes at
-            single-cell resolution, offering new insight into how editing influences
-            cellular fitness, differentiation and selection. The manuscript is under revision now.
-          </p>
-          <span class="tool-tag">Single-cell RNA-seq · CRISPR-Cas9-mediated homology-directed repair (HDR) · Base Editing · SCD and HSPCs · B2M and Primary T cell</span>
-        </article>
-
         <article class="stmt-item">
           <h3 class="stmt-head">Other Collaborations</h3>
           <p>
@@ -239,7 +264,6 @@
       </div>
     </details>
   </section>
-
   <!-- TOOLS -->
   <section id="tools" class="block wrap">
     <h2 class="section-head"><span class="tick">//</span> Tools</h2>
