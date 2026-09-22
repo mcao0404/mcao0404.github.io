@@ -38,7 +38,69 @@
   .tool-repo.pending {
     opacity: 0.6;            /* dimmer, non-clickable placeholder */
   }
-  read-more.css
+  /* ---------- research cards: "Read more" folds ---------- */
+  /* Each card is 4 rows (figure / title / summary / fold). Sharing those
+     rows across cards keeps the "Read more" links on one line even though
+     the summaries differ in length. Older browsers just skip this. */
+  @supports (grid-template-rows: subgrid) {
+    .thread {
+      display: grid;
+      grid-row: span 4;
+      grid-template-rows: subgrid;
+      row-gap: 0;
+    }
+  }
+
+  .thread-more { margin-top: .9rem; }
+  .thread-more summary {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    font-family: var(--mono);
+    font-size: .78rem;
+    font-weight: 400;
+    letter-spacing: .02em;
+    color: var(--ink-soft);
+    transition: color .15s;
+  }
+  .thread-more summary::-webkit-details-marker { display: none; }
+  .thread-more summary:hover { color: var(--signal); }
+  .thread-more summary:focus-visible {
+    color: var(--signal);
+    outline: 2px solid var(--signal);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  .thread-more[open] .fold-show { display: none; }
+  .thread-more[open] .fold-hide { display: inline; }
+  .thread-more .fold-icon {
+    display: inline-block;
+    width: .34rem;
+    height: .34rem;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    margin-top: -.2rem;
+  }
+  .thread-more[open] .fold-icon { transform: rotate(-135deg); margin-top: .15rem; }
+
+  .thread-detail {
+    margin-top: .9rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--signal-dim);
+    animation: fold-in .25s ease;
+  }
+  .thread-detail .stmt-head {
+    font-size: .95rem;
+    line-height: 1.35;
+    margin: 0 0 .5rem;
+  }
+  .thread .thread-detail p { font-size: .93rem; }
+  .thread-detail .tool-tag { display: block; margin-top: .6rem; line-height: 1.5; }
 </style>
 <script src="theme.js" defer></script>
 </head>
